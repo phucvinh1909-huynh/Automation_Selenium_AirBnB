@@ -42,6 +42,20 @@ public class BasePage {
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
+    protected boolean isDisplayed(By locator) {
+        try {
+            return wait.until(
+                    ExpectedConditions.visibilityOfElementLocated(locator)
+            ).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    protected By byTextContains(String text) {
+        return By.xpath("//*[contains(normalize-space(.), '" + text + "')]");
+    }
+
     public void highlight(WebElement element) {
         js.executeScript("arguments[0].style.border='2px solid green';", element);
         js.executeScript("arguments[0].style.backgroundColor='brown';",element);

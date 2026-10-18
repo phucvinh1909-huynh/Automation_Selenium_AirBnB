@@ -1,0 +1,11 @@
+name,email,password,phone,birthday,gender
+Vinh Test 01,register.test.040@gmail.com,DemoPass_2026!,0900000021,01/01/1998,Nam
+Vinh Test 02,register.test.040@gmail.com,DemoPass_2026!,0900000022,02/02/1997,Nữ
+Vinh Test 02,register.test.040,DemoPass_2026!,0900000022,02/02/1997,Nữ
+,register.test.023@gmail.com,DemoPass_2026!,0900000023,03/03/1996,Nam
+Vinh Test 04,,DemoPass_2026!,0900000024,04/04/1995,Nữ
+Vinh Test 05,register.test.031@gmail.com,,0900000025,05/05/1994,Nam
+Vinh Test 06,register.test.032@gmail.com,DemoPass_2026!,,06/06/1993,Nữ
+Vinh Test 07,register.test.033@gmail.com,DemoPass_2026!,0900000027,,Nam
+Vinh Test 08,register.test.035@gmail.com,DemoPass_2026!,0900000028,08/08/1991,
+,,,,,

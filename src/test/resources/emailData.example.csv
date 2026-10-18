@@ -1,2 +1,0 @@
-email,password,expectedResult
-invalid@example.com,replace-with-invalid-password,fail

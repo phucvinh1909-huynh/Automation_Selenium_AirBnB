@@ -1,13 +1,13 @@
 package utils;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.Duration;
 
 public class ScreenshotUtil {
     private static final ThreadLocal<String> testFolder = new ThreadLocal<>();
@@ -26,6 +26,13 @@ public class ScreenshotUtil {
     }
 
     public static void takeScreenshot(WebDriver driver, String stepName) {
+        try {
+            new WebDriverWait(driver, Duration.ofSeconds(2))
+                    .until(d -> "complete".equals(
+                            ((JavascriptExecutor) d)
+                                    .executeScript("return document.readyState")
+                    ));
+        } catch (TimeoutException ignored){}
         try {
             String testFolderName = testFolder.get();
 

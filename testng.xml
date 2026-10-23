@@ -1,3 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="AirBnB Account Epic - Chrome" verbose="1"><parameter name="browser" value="chrome"/><test name="Account Epic"><classes><class name="test.RegisterTest"/><class name="test.LoginTest"/><class name="test.ProfileTest"/></classes></test></suite>
+<suite name="Parralel by classes" verbose="1" parallel="classes" thread-count="3">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="device" value=""/>
+
+    <test name="All test">
+        <classes>
+            <class name="test.LoginTest"/>
+            <class name="test.RegisterTest" />
+            <class name="test.BookingTest" />
+        </classes>
+    </test>
+</suite>
